@@ -313,6 +313,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8148fd7dca4c77d4a970dd0d407a8971, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  stationPanel: {fileID: 414444594}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -924,7 +925,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 513155072}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 259837689}
+        m_TargetAssemblyTypeName: StationInteraction, Assembly-CSharp
+        m_MethodName: OpenStation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &553828238
 GameObject:
   m_ObjectHideFlags: 0
@@ -1708,7 +1721,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1714301023}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 259837689}
+        m_TargetAssemblyTypeName: StationInteraction, Assembly-CSharp
+        m_MethodName: CloseStation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1714301023
 MonoBehaviour:
   m_ObjectHideFlags: 0
