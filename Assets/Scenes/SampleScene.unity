@@ -744,6 +744,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.6000005, y: 1.2000005, z: 2.000001}
   m_Center: {x: -0.00000028614357, y: 0.00000006560502, z: -1.0000004}
+--- !u!114 &370393365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 370393357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92dc8a080f3716c4187b96e7123e5e6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GrindstoneInteraction
+  playerInventory: {fileID: 953061738}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1021,6 +1034,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1dcdec05f95942b4c9a07f1042208dfd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 370393361}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1dcdec05f95942b4c9a07f1042208dfd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 370393365}
   m_SourcePrefab: {fileID: 100100000, guid: 1dcdec05f95942b4c9a07f1042208dfd, type: 3}
 --- !u!1 &473400318
 GameObject:
@@ -1683,6 +1699,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.2000003, y: 2.6000004, z: 3.700001}
   m_Center: {x: -0.0000000015851649, y: 0.09999998, z: -0.15}
+--- !u!114 &732108460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 732108452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42ffd08064229df48be132333131d6d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FurnaceInteraction
+  playerInventory: {fileID: 953061738}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -2586,7 +2615,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2bf21170b519d843b70aa5316be095a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StationItemButton
-  itemToGive: {fileID: 11400000, guid: 5516da39621ede146bb60bd827c4eef8, type: 2}
+  itemToGive: {fileID: 11400000, guid: 4b4992b031951c944aa71ed30a1b0038, type: 2}
   playerInventory: {fileID: 953061738}
 --- !u!1001 &1285039431
 PrefabInstance:
@@ -3900,6 +3929,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1079dc32c2b883443880c5ddf01d37a7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 732108456}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1079dc32c2b883443880c5ddf01d37a7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 732108460}
   m_SourcePrefab: {fileID: 100100000, guid: 1079dc32c2b883443880c5ddf01d37a7, type: 3}
 --- !u!1 &1959371187 stripped
 GameObject:

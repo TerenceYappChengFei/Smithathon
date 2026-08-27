@@ -2,9 +2,12 @@ using UnityEngine;
 
 public class PlayerInteraction : MonoBehaviour
 {
-    private StationInteraction currentStation;
+    private StationInteraction currentStation; //for detection of which station player is facing
     public CanvasGroup interactButton; //for interact button behaviours
-    private ScrapBinInteraction currentScrapBin;
+    private ScrapBinInteraction currentScrapBin; //for scrapping iems
+    private GrindstoneInteraction currentGrindstone; //for sharpening mechanic
+    private FurnaceInteraction currentFurnace; //for smelting mechanic
+
 
 
 
@@ -21,19 +24,36 @@ public class PlayerInteraction : MonoBehaviour
         if (station != null)
         {
             currentStation = station;
-            SetInteractButton(true);
             //Debug.Log("Station is available");
         }
 
-        // if detected scrap bin, set currentScrapBin to that scrap bin and enable the interact button
+        // if detected scrap bin, updates detection and enables corresponding interact function
         ScrapBinInteraction scrapBin =
             other.GetComponent<ScrapBinInteraction>();
 
         if (scrapBin != null)
         {
             currentScrapBin = scrapBin;
-            SetInteractButton(true);
         }
+
+        //if detected grindstone, updates detection and enables corresponding interact function 
+        GrindstoneInteraction grindstone =
+            other.GetComponent<GrindstoneInteraction>();
+
+        if (grindstone != null)
+        {
+            currentGrindstone = grindstone;
+        }
+        //if detected grindsotne, updates detection and enables corresponding interaction
+        FurnaceInteraction furnace =
+            other.GetComponent<FurnaceInteraction>();
+
+        if (furnace != null)
+        {
+            currentFurnace = furnace;
+        }
+
+        UpdateInteractButton();
 
     }
 
@@ -46,22 +66,36 @@ public class PlayerInteraction : MonoBehaviour
         {
             currentStation = null;
 
-            //SetInteractButton(false);
-            SetInteractButton(currentScrapBin != null);
-
             //Debug.Log("Station is no longer available");
         }
 
-        // if detected scrap bin, set currentScrapBin to null and disable the interact button
+        // Disables scrap bin interact fucntion when walk away
         ScrapBinInteraction scrapBin =
-        other.GetComponent<ScrapBinInteraction>();
+            other.GetComponent<ScrapBinInteraction>();
 
         if (scrapBin == currentScrapBin)
         {
             currentScrapBin = null;
-
-            SetInteractButton(currentStation != null);
         }
+        //Disables grindstone interact function when walk away
+        GrindstoneInteraction grindstone =
+            other.GetComponent<GrindstoneInteraction>();
+
+        if (grindstone == currentGrindstone)
+        {
+            currentGrindstone = null;
+        }
+
+        //Disables furnace interact function when walk away
+        FurnaceInteraction furnace =
+    other.GetComponent<FurnaceInteraction>();
+
+        if (furnace == currentFurnace)
+        {
+            currentFurnace = null;
+        }
+
+        UpdateInteractButton();
 
     }
 
@@ -71,11 +105,21 @@ public class PlayerInteraction : MonoBehaviour
         {
             currentScrapBin.DestroyHeldItem();
         }
+        else if (currentGrindstone != null)
+        {
+            currentGrindstone.SharpenHeldWeapon();
+        }
+        else if (currentFurnace != null)
+        {
+            currentFurnace.SmeltHeldItem();
+        }
         else if (currentStation != null)
         {
             currentStation.OpenStation();
         }
     }
+
+
 
     private void SetInteractButton(bool available)
     {
@@ -91,6 +135,18 @@ public class PlayerInteraction : MonoBehaviour
             interactButton.interactable = false;
             interactButton.blocksRaycasts = false;
         }
+    }
+
+    //Enables interact button when approaching stations
+    private void UpdateInteractButton()
+    {
+        bool interactionAvailable =
+            currentStation != null ||
+            currentScrapBin != null ||
+            currentGrindstone != null ||
+            currentFurnace != null;
+
+        SetInteractButton(interactionAvailable);
     }
 
 }

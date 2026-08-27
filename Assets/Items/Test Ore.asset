@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4fa2b6a925e5cb748a195a958adc1303, type: 3}
-  m_Name: Test Dull Weapon
+  m_Name: Test Ore
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
-  itemName: Test Dull Weapon
-  itemIcon: {fileID: 1441450685, guid: da7f092564f19d246bd5c1310c52d658, type: 3}
-  itemCategory: 4
-  weaponCondition: 1
-  sharpenedVersion: {fileID: 11400000, guid: 0be7bac1eb3815540a9fbed19be4b152, type: 2}
-  smeltedVersion: {fileID: 0}
+  itemName: Test Ore
+  itemIcon: {fileID: 1294552425, guid: 4fdde7f05c081ac4583fa6278a8dfd1c, type: 3}
+  itemCategory: 0
+  weaponCondition: 0
+  sharpenedVersion: {fileID: 0}
+  smeltedVersion: {fileID: 11400000, guid: 5516da39621ede146bb60bd827c4eef8, type: 2}

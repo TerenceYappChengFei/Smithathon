@@ -35,5 +35,6 @@ public class ItemData : ScriptableObject
     public ItemCategory itemCategory;
     public WeaponCondition weaponCondition;
     public ItemData sharpenedVersion;
+    public ItemData smeltedVersion;
 
 }
