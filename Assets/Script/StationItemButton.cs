@@ -5,6 +5,7 @@ public class StationItemButton : MonoBehaviour
     public ItemData itemToGive;
     public PlayerInventory playerInventory;
 
+    //Checks player inventory for space, only gives item if it's not full
     public void GiveItem()
     {
         bool itemAdded = playerInventory.AddItem(itemToGive);

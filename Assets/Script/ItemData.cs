@@ -34,4 +34,6 @@ public class ItemData : ScriptableObject
     //Defines item category and weapon condition and make them accessible in the inspector
     public ItemCategory itemCategory;
     public WeaponCondition weaponCondition;
+    public ItemData sharpenedVersion;
+
 }
