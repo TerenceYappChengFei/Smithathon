@@ -124,4 +124,46 @@ public class PlayerInventory : MonoBehaviour
         UpdateHotbar();
     }
 
+    //Keeps the result in the same selected slot instead of adding or removing.
+    public void ReplaceSelectedItem(ItemData newItem)
+    {
+        if (selectedSlot == 1)
+        {
+            slot1Item = newItem;
+        }
+        else
+        {
+            slot2Item = newItem;
+        }
+
+        UpdateHotbar();
+    }
+
+    //Time to check crafting UGGGGGGGGGGGGGGGGGGGGGGGGGGHHHHHHHHHHHHHHHH
+
+    //Checks for viable crafting recipe, and the order can either in inventory
+    public bool HasItems(ItemData firstItem, ItemData secondItem)
+    {
+        bool normalOrder =
+            slot1Item == firstItem &&
+            slot2Item == secondItem;
+
+        bool reverseOrder =
+            slot1Item == secondItem &&
+            slot2Item == firstItem;
+
+        return normalOrder || reverseOrder;
+    }
+
+    public void CombineItems(ItemData resultItem)
+    {
+        slot1Item = resultItem;
+        slot2Item = null;
+
+        selectedSlot = 1;
+
+        UpdateHotbar();
+        UpdateSelection();
+    }
+
 }

@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4fa2b6a925e5cb748a195a958adc1303, type: 3}
-  m_Name: Test_Axe
+  m_Name: Test_WeaponPart
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
-  itemName: Test Axe
-  itemIcon: {fileID: 523986249, guid: 87ac171f3708b5245b286ef8664ea0b1, type: 3}
-  itemCategory: 4
-  weaponCondition: 1
+  itemName: Test Weapon Part
+  itemIcon: {fileID: 1030602872, guid: a0c9759f98f2519438e15057fcbfb0eb, type: 3}
+  itemCategory: 3
+  weaponCondition: 0
