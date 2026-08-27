@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4796845dc9721a84d8d2cee56f71fe28
+guid: ad66edfd84538f240896dad8626fcc9a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: button_placeholder
+      name: Stellarite_Sword_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 25
-        height: 24
+        width: 30
+        height: 30
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -125,8 +125,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3b4f4138d4f35d499ca627424ffb4dc
-      internalID: -1649609861
+      spriteID: 3cb614af56df7264daa6e670a908ecbe
+      internalID: 328568913
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 4976717c06ac2c04b878b420bb912eb5
+    spriteID: 7e22872e370682d4f8dcfc1e32742189
     internalID: 0
     vertices: []
     indices: 
@@ -147,7 +147,7 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      button_placeholder: -1649609861
+      Stellarite_Sword_0: 328568913
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
