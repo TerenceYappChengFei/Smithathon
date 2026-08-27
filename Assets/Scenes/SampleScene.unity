@@ -818,6 +818,7 @@ GameObject:
   - component: {fileID: 513155073}
   - component: {fileID: 513155072}
   - component: {fileID: 513155074}
+  - component: {fileID: 513155075}
   m_Layer: 5
   m_Name: Interact
   m_TagString: Untagged
@@ -926,9 +927,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 259837689}
-        m_TargetAssemblyTypeName: StationInteraction, Assembly-CSharp
-        m_MethodName: OpenStation
+      - m_Target: {fileID: 953061735}
+        m_TargetAssemblyTypeName: PlayerInteraction, Assembly-CSharp
+        m_MethodName: Interact
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -938,6 +939,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!225 &513155075
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513155070}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &553828238
 GameObject:
   m_ObjectHideFlags: 0
@@ -1237,6 +1250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e9ca7d152054c848b1f5b33268d7a4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  interactButton: {fileID: 513155075}
 --- !u!1 &1111579474 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 197339fb7a71b5240a405abc8034ae2b, type: 3}
@@ -1529,7 +1543,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3881087803549984436, guid: ec536a7718376554185e4a856d5ae230, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 19.63263
+      value: 19.632568
       objectReference: {fileID: 0}
     - target: {fileID: 3881087803549984436, guid: ec536a7718376554185e4a856d5ae230, type: 3}
       propertyPath: m_AnchoredPosition.y
