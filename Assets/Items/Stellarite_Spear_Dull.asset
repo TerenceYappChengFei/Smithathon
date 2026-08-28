@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fa2b6a925e5cb748a195a958adc1303, type: 3}
   m_Name: Stellarite_Spear_Dull
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
-  itemName: Stellarite Axe Dull
+  itemName: Stellarite Spear Dull
   itemIcon: {fileID: 1433342729, guid: 6da9f28d9227055489a85ac78d505ab9, type: 3}
   itemCategory: 4
-  weaponCondition: 2
+  weaponCondition: 1
   sharpenedVersion: {fileID: 11400000, guid: b6d73a789ba53234398cfa03e2fd424c, type: 2}
   smeltedVersion: {fileID: 0}

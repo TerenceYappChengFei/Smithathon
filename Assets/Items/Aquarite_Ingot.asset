@@ -18,3 +18,6 @@ MonoBehaviour:
   weaponCondition: 0
   sharpenedVersion: {fileID: 0}
   smeltedVersion: {fileID: 0}
+  swordHeadVersion: {fileID: 11400000, guid: 6573b50c05f5c3440a9fa0b2751059d2, type: 2}
+  axeHeadVersion: {fileID: 11400000, guid: 825675e0de57ca544b12e5ec8ecc41f5, type: 2}
+  spearHeadVersion: {fileID: 11400000, guid: eced645ef219dc54cb996a0eda9c3721, type: 2}

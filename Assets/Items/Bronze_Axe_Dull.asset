@@ -15,6 +15,6 @@ MonoBehaviour:
   itemName: Bronze Axe Dull
   itemIcon: {fileID: 2040564694, guid: 08c5f8db65913cb47adda844d6b389f0, type: 3}
   itemCategory: 4
-  weaponCondition: 2
+  weaponCondition: 1
   sharpenedVersion: {fileID: 11400000, guid: edc7065516c795d4e9f6c2b563feaf64, type: 2}
   smeltedVersion: {fileID: 0}

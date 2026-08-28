@@ -15,6 +15,6 @@ MonoBehaviour:
   itemName: Aquarite Axe Dull
   itemIcon: {fileID: -13853808, guid: 5a9d74d45668bdf4c851898860b43058, type: 3}
   itemCategory: 4
-  weaponCondition: 2
+  weaponCondition: 1
   sharpenedVersion: {fileID: 11400000, guid: db126cca0c938b8448776a5d209cd604, type: 2}
   smeltedVersion: {fileID: 0}

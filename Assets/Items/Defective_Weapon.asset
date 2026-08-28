@@ -10,14 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4fa2b6a925e5cb748a195a958adc1303, type: 3}
-  m_Name: Iron_Ingot
+  m_Name: Defective_Weapon
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
-  itemName: Iron Ingot
-  itemIcon: {fileID: 1661468701, guid: 77d3caa30305e09469ea0fdc55e10fa6, type: 3}
-  itemCategory: 2
+  itemName: Defective Weapon
+  itemIcon: {fileID: -524513402, guid: 0559c1100d704374c90befa75853a979, type: 3}
+  itemCategory: 4
   weaponCondition: 0
   sharpenedVersion: {fileID: 0}
   smeltedVersion: {fileID: 0}
-  swordHeadVersion: {fileID: 11400000, guid: edba82aaf34d31d4c99b56cf9b43d38a, type: 2}
-  axeHeadVersion: {fileID: 11400000, guid: 0dde9afa616a0c34986520292daf7a28, type: 2}
-  spearHeadVersion: {fileID: 11400000, guid: 0f25ef8e7368a434a911699db7e45fe6, type: 2}
+  swordHeadVersion: {fileID: 0}
+  axeHeadVersion: {fileID: 0}
+  spearHeadVersion: {fileID: 0}
+  requiredAssemblyItem: {fileID: 0}
+  assembledVersion: {fileID: 0}

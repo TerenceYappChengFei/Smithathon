@@ -37,4 +37,13 @@ public class ItemData : ScriptableObject
     public ItemData sharpenedVersion;
     public ItemData smeltedVersion;
 
+    //The weapon heads that an ingot can become at the anvil
+    public ItemData swordHeadVersion;
+    public ItemData axeHeadVersion;
+    public ItemData spearHeadVersion;
+
+    //These are only used by weapon heads at the workbench
+    public ItemData requiredAssemblyItem;
+    public ItemData assembledVersion;
+
 }

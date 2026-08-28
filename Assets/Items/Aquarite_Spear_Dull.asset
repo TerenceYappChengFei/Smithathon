@@ -15,6 +15,6 @@ MonoBehaviour:
   itemName: Aquarite Spear Dull
   itemIcon: {fileID: -1057026538, guid: 43f8a5a62b418534fab4fd66777fadc1, type: 3}
   itemCategory: 4
-  weaponCondition: 2
-  sharpenedVersion: {fileID: 11400000, guid: 1a05ed027f1f83947a79d532217a947f, type: 2}
+  weaponCondition: 1
+  sharpenedVersion: {fileID: 11400000, guid: d866876b1a437e349a056cf14043d2db, type: 2}
   smeltedVersion: {fileID: 0}

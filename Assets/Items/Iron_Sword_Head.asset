@@ -18,3 +18,5 @@ MonoBehaviour:
   weaponCondition: 0
   sharpenedVersion: {fileID: 0}
   smeltedVersion: {fileID: 0}
+  requiredAssemblyItem: {fileID: 11400000, guid: e6eb9eeffa86b954190a1d7842e48433, type: 2}
+  assembledVersion: {fileID: 11400000, guid: 4d7b17a7ca6013b449228cfeee7009f3, type: 2}
