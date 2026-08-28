@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fa2b6a925e5cb748a195a958adc1303, type: 3}
+  m_Name: Aquarite_Axe_Head
+  m_EditorClassIdentifier: Assembly-CSharp::ItemData
+  itemName: Aquarite Axe Head
+  itemIcon: {fileID: -926202444, guid: 0a0db24bb06338c4296245c3bcaab5e4, type: 3}
+  itemCategory: 3
+  weaponCondition: 0
+  sharpenedVersion: {fileID: 0}
+  smeltedVersion: {fileID: 0}

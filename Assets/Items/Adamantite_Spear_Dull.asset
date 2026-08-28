@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fa2b6a925e5cb748a195a958adc1303, type: 3}
+  m_Name: Adamantite_Spear_Dull
+  m_EditorClassIdentifier: Assembly-CSharp::ItemData
+  itemName: Adamantite Spear Dull
+  itemIcon: {fileID: -1618661253, guid: 736cf0a014ee0134dbd69f68c6234f22, type: 3}
+  itemCategory: 4
+  weaponCondition: 2
+  sharpenedVersion: {fileID: 11400000, guid: f1d3c460779487f44a783a3c55de87dd, type: 2}
+  smeltedVersion: {fileID: 0}

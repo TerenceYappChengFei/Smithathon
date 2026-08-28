@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fa2b6a925e5cb748a195a958adc1303, type: 3}
+  m_Name: Bronze_Sword_Dull
+  m_EditorClassIdentifier: Assembly-CSharp::ItemData
+  itemName: Bronze Sword Dull
+  itemIcon: {fileID: 143707434, guid: 5a788742c64fcd640909adf6e7796a0a, type: 3}
+  itemCategory: 4
+  weaponCondition: 1
+  sharpenedVersion: {fileID: 11400000, guid: 27f21869325b6254cbe4d77ca608f9a5, type: 2}
+  smeltedVersion: {fileID: 0}

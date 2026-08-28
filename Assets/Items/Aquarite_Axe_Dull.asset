@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fa2b6a925e5cb748a195a958adc1303, type: 3}
+  m_Name: Aquarite_Axe_Dull
+  m_EditorClassIdentifier: Assembly-CSharp::ItemData
+  itemName: Aquarite Axe Dull
+  itemIcon: {fileID: -13853808, guid: 5a9d74d45668bdf4c851898860b43058, type: 3}
+  itemCategory: 4
+  weaponCondition: 2
+  sharpenedVersion: {fileID: 11400000, guid: db126cca0c938b8448776a5d209cd604, type: 2}
+  smeltedVersion: {fileID: 0}

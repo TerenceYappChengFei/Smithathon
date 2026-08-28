@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fa2b6a925e5cb748a195a958adc1303, type: 3}
+  m_Name: Bronze_Axe_Sharp
+  m_EditorClassIdentifier: Assembly-CSharp::ItemData
+  itemName: Bronze Axe Sharp
+  itemIcon: {fileID: -245055124, guid: d4bb9eae3bc2a9c44bfde84aa87d28c2, type: 3}
+  itemCategory: 4
+  weaponCondition: 2
+  sharpenedVersion: {fileID: 0}
+  smeltedVersion: {fileID: 0}
