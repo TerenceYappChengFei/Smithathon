@@ -13,8 +13,13 @@ MonoBehaviour:
   m_Name: Bronze_Spear_Dull
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
   itemName: Bronze Spear Dull
-  itemIcon: {fileID: -2144781068, guid: 1755e3b8edd9a1547a7c9e0110785950, type: 3}
+  itemIcon: {fileID: 1030602872, guid: a0c9759f98f2519438e15057fcbfb0eb, type: 3}
   itemCategory: 4
   weaponCondition: 1
   sharpenedVersion: {fileID: 11400000, guid: 7dbf53823a325274e8a1bd05aaf0b63f, type: 2}
   smeltedVersion: {fileID: 0}
+  swordHeadVersion: {fileID: 0}
+  axeHeadVersion: {fileID: 0}
+  spearHeadVersion: {fileID: 0}
+  requiredAssemblyItem: {fileID: 0}
+  assembledVersion: {fileID: 0}

@@ -67,5 +67,5 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "MultimediaAuthoring2_DDM243_051_TerenceYappChengFei.slnx"
+    "dotnet.defaultSolution": "Smithathon.slnx"
 }
