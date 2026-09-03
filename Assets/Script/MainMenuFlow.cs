@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenuFlow : MonoBehaviour
 {
@@ -80,6 +81,11 @@ public class MainMenuFlow : MonoBehaviour
         }
 
         StartCoroutine(ShowMainMenuSequence());
+    }
+
+    public void StartGame()
+    {
+        SceneManager.LoadScene("SampleScene");
     }
 
     private IEnumerator ShowMainMenuSequence()
