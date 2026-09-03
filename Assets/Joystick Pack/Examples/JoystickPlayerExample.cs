@@ -8,18 +8,31 @@ public class JoystickPlayerExample : MonoBehaviour
     public float acceleration;
     public float deceleration;
     private Quaternion targetRotation;
+    private float startingXRotation;
+    private float startingZRotation;
 
     public VariableJoystick variableJoystick;
     public Rigidbody rb;
 
     private void Start()
     {
+        // Store the initial X and Z rotation values of the Rigidbody so player won't change rotation when colliding with walls or other objects
+        startingXRotation = rb.rotation.eulerAngles.x;
+        startingZRotation = rb.rotation.eulerAngles.z;
+
         // Initialize the target rotation to the current rotation of the Rigidbody
         targetRotation = rb.rotation;
     }
 
     public void FixedUpdate()
     {
+        Vector3 actualMovement = new Vector3(
+            rb.linearVelocity.x,
+            0f,
+            rb.linearVelocity.z
+        );
+
+
         Vector3 direction = new Vector3(
             -variableJoystick.Horizontal,
             0f,
@@ -56,14 +69,15 @@ public class JoystickPlayerExample : MonoBehaviour
             // Find the movement direction,
             //convert to Y rotation and 90 degrees to face the direction of movement
             //compensate for model's innate orientation
-            float targetYRotation = Quaternion.LookRotation(direction).eulerAngles.y + 90f;
+            float targetYRotation =
+            Quaternion.LookRotation(direction).eulerAngles.y;
             // Add 90 degrees to face the direction of movement
 
             // Create a new rotation that only affects the Y-axis (up axis) while not changing the X and Z rotations 
             targetRotation = Quaternion.Euler(
-            rb.rotation.eulerAngles.x,
+            startingXRotation,
             targetYRotation,
-            rb.rotation.eulerAngles.z
+            startingZRotation
             );
 
         }
