@@ -8,6 +8,8 @@ public class PlayerInteraction : MonoBehaviour
     private GrindstoneInteraction currentGrindstone; //for sharpening mechanic
     private FurnaceInteraction currentFurnace; //for smelting mechanic
     private WorkbenchInteraction currentWorkbench; //for assembling weapons
+    private CounterInteraction currentCounter; //for submitting orders
+
 
 
 
@@ -62,6 +64,15 @@ public class PlayerInteraction : MonoBehaviour
             currentWorkbench = workbench;
         }
 
+        CounterInteraction counter =
+    other.GetComponent<CounterInteraction>();
+
+        if (counter != null)
+        {
+            currentCounter = counter;
+        }
+
+
         UpdateInteractButton();
 
     }
@@ -112,6 +123,15 @@ public class PlayerInteraction : MonoBehaviour
             currentWorkbench = null;
         }
 
+        CounterInteraction counter =
+    other.GetComponent<CounterInteraction>();
+
+        if (counter == currentCounter)
+        {
+            currentCounter = null;
+        }
+
+
         UpdateInteractButton();
 
     }
@@ -133,6 +153,10 @@ public class PlayerInteraction : MonoBehaviour
         else if (currentWorkbench != null)
         {
             currentWorkbench.AssembleHeldItems();
+        }
+        else if (currentCounter != null)
+        {
+            currentCounter.SubmitHeldItem();
         }
         else if (currentStation != null)
         {
@@ -166,7 +190,8 @@ public class PlayerInteraction : MonoBehaviour
             currentScrapBin != null ||
             currentGrindstone != null ||
             currentFurnace != null ||
-            currentWorkbench != null;
+            currentWorkbench != null ||
+            currentCounter != null;
 
         SetInteractButton(interactionAvailable);
     }

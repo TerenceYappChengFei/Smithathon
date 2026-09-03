@@ -1,0 +1,135 @@
+using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+
+public class GameProgressManager : MonoBehaviour
+{
+    public int reputation = 50;
+    public int successfulOrders;
+    public int failedOrders;
+    public int score;
+
+    public bool practiceMode;
+
+    public Slider reputationBar;
+    public TMP_Text reputationText;
+    public int difficultyLevel = 1;
+    public OrderManager orderManager;
+    public TMP_Text difficultyText;
+    public Image reputationFill;
+    public TMP_Text scoreText;
+
+
+
+    private void Start()
+    {
+        UpdateReputationUI();
+        UpdateScoreUI();
+        UpdateDifficulty();
+
+    }
+
+    public void RegisterSuccess(int patienceBonus)
+    {
+        successfulOrders++;
+
+        score += 100 + patienceBonus;
+        UpdateScoreUI();
+
+        if (!practiceMode)
+        {
+            ChangeReputation(5);
+        }
+
+        UpdateDifficulty();
+
+    }
+
+    private void UpdateScoreUI()
+    {
+        if (scoreText != null)
+        {
+            scoreText.text =
+                "Score: " + score;
+        }
+    }
+
+    public void RegisterFailure()
+    {
+        failedOrders++;
+
+        if (!practiceMode)
+        {
+            ChangeReputation(-10);
+        }
+    }
+
+    private void ChangeReputation(int amount)
+    {
+        reputation += amount;
+        reputation = Mathf.Clamp(reputation, 0, 100);
+
+        UpdateReputationUI();
+    }
+
+    private void UpdateReputationUI()
+    {
+        reputationBar.value = reputation;
+
+        if (reputationText != null)
+        {
+            reputationText.text =
+                "Reputation: " + reputation;
+        }
+        //use >= 50 if want start as green
+        if (reputation > 50)
+        {
+            reputationFill.color = Color.green;
+        }
+        else if (reputation > 25)
+        {
+            reputationFill.color = Color.yellow;
+        }
+        else
+        {
+            reputationFill.color = Color.red;
+        }
+
+    }
+
+    private void UpdateDifficulty()
+    {
+        if (practiceMode)
+        {
+            difficultyLevel = 1;
+        }
+        else if (successfulOrders >= 9)
+        {
+            difficultyLevel = 4;
+        }
+        else if (successfulOrders >= 6)
+        {
+            difficultyLevel = 3;
+        }
+        else if (successfulOrders >= 3)
+        {
+            difficultyLevel = 2;
+        }
+        else
+        {
+            difficultyLevel = 1;
+        }
+
+        if (orderManager != null)
+        {
+            orderManager.SetDifficulty(difficultyLevel);
+        }
+
+        if (difficultyText != null)
+        {
+            difficultyText.text =
+                "Difficulty: " + difficultyLevel;
+        }
+    }
+
+}
