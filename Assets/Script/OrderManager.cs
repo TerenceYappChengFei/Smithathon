@@ -150,7 +150,7 @@ public class OrderManager : MonoBehaviour
             return false;
         }
 
-        earliestOrder.FailOrder();
+        earliestOrder.FailOrder(FailureReason.WrongOrder);
         return true;
     }
 

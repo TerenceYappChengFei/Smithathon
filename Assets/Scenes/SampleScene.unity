@@ -2308,6 +2308,7 @@ GameObject:
   - component: {fileID: 386035232}
   - component: {fileID: 386035231}
   - component: {fileID: 386035230}
+  - component: {fileID: 386035233}
   m_Layer: 5
   m_Name: RetryButton
   m_TagString: Untagged
@@ -2378,7 +2379,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 386035231}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1448409813}
+        m_TargetAssemblyTypeName: PauseMenuController, Assembly-CSharp
+        m_MethodName: RestartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &386035231
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2417,6 +2430,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 386035228}
   m_CullTransparentMesh: 1
+--- !u!225 &386035233
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 386035228}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &396368002
 GameObject:
   m_ObjectHideFlags: 0
@@ -4826,6 +4851,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 775363439}
+  - component: {fileID: 775363440}
   m_Layer: 5
   m_Name: Endings
   m_TagString: Untagged
@@ -4854,6 +4880,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -7.9}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!225 &775363440
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775363438}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!4 &779375041 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7b105a2bd6cb0c340817548657bbcfe2, type: 3}
@@ -5513,13 +5551,14 @@ GameObject:
   - component: {fileID: 888028485}
   - component: {fileID: 888028487}
   - component: {fileID: 888028486}
+  - component: {fileID: 888028488}
   m_Layer: 5
   m_Name: GameOverPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &888028485
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5582,6 +5621,31 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 888028484}
   m_CullTransparentMesh: 1
+--- !u!114 &888028488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888028484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a8d1cb133de80c40ac7bee50f59ba90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameOverAnimation
+  blackPanel: {fileID: 1263893829}
+  endings: {fileID: 775363440}
+  score: {fileID: 1498929143}
+  retryButton: {fileID: 386035233}
+  mainMenuButton: {fileID: 1557938888}
+  endingsTransform: {fileID: 775363439}
+  scoreTransform: {fileID: 1498929140}
+  retryButtonTransform: {fileID: 386035229}
+  mainMenuButtonTransform: {fileID: 1557938884}
+  fadeDuration: 0.5
+  floatDuration: 0.5
+  buttonDelay: 0.15
+  floatDistance: 50
 --- !u!1 &889184831
 GameObject:
   m_ObjectHideFlags: 0
@@ -7954,6 +8018,7 @@ GameObject:
   - component: {fileID: 1263893826}
   - component: {fileID: 1263893828}
   - component: {fileID: 1263893827}
+  - component: {fileID: 1263893829}
   m_Layer: 5
   m_Name: BlackPanel
   m_TagString: Untagged
@@ -8018,6 +8083,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1263893825}
   m_CullTransparentMesh: 1
+--- !u!225 &1263893829
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1263893825}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1001 &1264782907
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8620,7 +8697,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9045eed30e659b4086a4b28f2d0b9db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameProgressManager
-  reputation: 50
+  reputation: 10
   successfulOrders: 0
   failedOrders: 0
   score: 0
@@ -8632,6 +8709,12 @@ MonoBehaviour:
   difficultyText: {fileID: 0}
   reputationFill: {fileID: 1239314299}
   scoreText: {fileID: 1259072307}
+  gameOverPanel: {fileID: 888028484}
+  closedDownEnding: {fileID: 1937638480}
+  overwhelmedEnding: {fileID: 1085941220}
+  gameOverAnimation: {fileID: 888028488}
+  finalScoreText: {fileID: 1498929141}
+  gameOverDelay: 1
 --- !u!4 &1404727415
 Transform:
   m_ObjectHideFlags: 0
@@ -9559,8 +9642,9 @@ GameObject:
   - component: {fileID: 1498929140}
   - component: {fileID: 1498929142}
   - component: {fileID: 1498929141}
+  - component: {fileID: 1498929143}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: FinalScoreText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9599,13 +9683,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Score
+  m_text: 'Score: 67'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fba2a7e39404e6541bfe424b2ccc745e, type: 2}
   m_sharedMaterial: {fileID: 4293092933454537983, guid: fba2a7e39404e6541bfe424b2ccc745e, type: 2}
@@ -9685,6 +9769,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1498929139}
   m_CullTransparentMesh: 1
+--- !u!225 &1498929143
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498929139}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1508267767
 GameObject:
   m_ObjectHideFlags: 0
@@ -10132,6 +10228,7 @@ GameObject:
   - component: {fileID: 1557938887}
   - component: {fileID: 1557938886}
   - component: {fileID: 1557938885}
+  - component: {fileID: 1557938888}
   m_Layer: 5
   m_Name: MainMenuButton
   m_TagString: Untagged
@@ -10202,7 +10299,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1557938886}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1448409813}
+        m_TargetAssemblyTypeName: PauseMenuController, Assembly-CSharp
+        m_MethodName: ReturnToMainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1557938886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10241,6 +10350,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1557938883}
   m_CullTransparentMesh: 1
+--- !u!225 &1557938888
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1557938883}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1569244689
 GameObject:
   m_ObjectHideFlags: 0

@@ -58,8 +58,9 @@ public class OrderDisplay : MonoBehaviour
 
         if (patienceRemaining <= 0f)
         {
-            FailOrder();
+            FailOrder(FailureReason.OrderTimeout);
         }
+
     }
 
     private void UpdatePatienceColor(float patiencePercent)
@@ -132,7 +133,7 @@ public class OrderDisplay : MonoBehaviour
         StartCoroutine(PlayResultAnimation(Color.green));
     }
 
-    public void FailOrder()
+    public void FailOrder(FailureReason failureReason)
     {
         if (!hasOrder || isResolving)
         {
@@ -141,7 +142,7 @@ public class OrderDisplay : MonoBehaviour
 
         if (gameProgressManager != null)
         {
-            gameProgressManager.RegisterFailure();
+            gameProgressManager.RegisterFailure(failureReason);
         }
 
         StartCoroutine(PlayResultAnimation(Color.red));

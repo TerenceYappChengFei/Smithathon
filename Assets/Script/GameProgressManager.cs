@@ -1,7 +1,13 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+public enum FailureReason
+{
+    WrongOrder,
+    OrderTimeout
+}
 public class GameProgressManager : MonoBehaviour
 {
     public int reputation = 50;
@@ -18,14 +24,27 @@ public class GameProgressManager : MonoBehaviour
     public TMP_Text difficultyText;
     public Image reputationFill;
     public TMP_Text scoreText;
+    public GameObject gameOverPanel;
+    public GameObject closedDownEnding;
+    public GameObject overwhelmedEnding;
+    public GameOverAnimation gameOverAnimation;
+    public TMP_Text finalScoreText;
 
 
+    public float gameOverDelay = 1f; // Delay before showing the game over panel so won't feel too sudden
+
+    private bool gameOverStarted;
 
     private void Start()
     {
         UpdateReputationUI();
         UpdateScoreUI();
         UpdateDifficulty();
+
+        gameOverPanel.SetActive(false);
+        closedDownEnding.SetActive(false);
+        overwhelmedEnding.SetActive(false);
+        gameOverStarted = false;
 
     }
 
@@ -54,15 +73,56 @@ public class GameProgressManager : MonoBehaviour
         }
     }
 
-    public void RegisterFailure()
+    public void RegisterFailure(FailureReason failureReason)
     {
+        if (gameOverStarted)
+        {
+            return;
+        }
+
         failedOrders++;
 
         if (!practiceMode)
         {
             ChangeReputation(-10);
+
+            if (reputation <= 0)
+            {
+                gameOverStarted = true;
+                StartCoroutine(
+                    ShowGameOverAfterDelay(failureReason)
+                );
+            }
         }
     }
+
+    private IEnumerator ShowGameOverAfterDelay(
+    FailureReason failureReason
+)
+    {
+        yield return new WaitForSeconds(gameOverDelay);
+
+        gameOverPanel.SetActive(true);
+        gameOverPanel.transform.SetAsLastSibling();
+        finalScoreText.text = "Score: " + score;
+        gameOverAnimation.PlayAnimation();
+
+
+        if (failureReason == FailureReason.WrongOrder)
+        {
+            closedDownEnding.SetActive(true);
+            overwhelmedEnding.SetActive(false);
+        }
+        else
+        {
+            closedDownEnding.SetActive(false);
+            overwhelmedEnding.SetActive(true);
+        }
+
+        Time.timeScale = 0f;
+    }
+
+
 
     private void ChangeReputation(int amount)
     {
@@ -131,5 +191,4 @@ public class GameProgressManager : MonoBehaviour
                 "Difficulty: " + difficultyLevel;
         }
     }
-
 }
