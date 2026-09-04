@@ -13,8 +13,13 @@ MonoBehaviour:
   m_Name: Stellarite_Sword_Dull
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
   itemName: Stellarite Sword Dull
-  itemIcon: {fileID: -1167107162, guid: 12d5de203e78834478ed651f1e05672d, type: 3}
+  itemIcon: {fileID: 328568913, guid: ad66edfd84538f240896dad8626fcc9a, type: 3}
   itemCategory: 4
   weaponCondition: 1
   sharpenedVersion: {fileID: 11400000, guid: 95b818c811cdcce4e9f7856b6df0ea5e, type: 2}
   smeltedVersion: {fileID: 0}
+  swordHeadVersion: {fileID: 0}
+  axeHeadVersion: {fileID: 0}
+  spearHeadVersion: {fileID: 0}
+  requiredAssemblyItem: {fileID: 0}
+  assembledVersion: {fileID: 0}
