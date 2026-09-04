@@ -37,6 +37,8 @@ public class GameProgressManager : MonoBehaviour
 
     private void Start()
     {
+        practiceMode = GameModeSettings.isPracticeMode;
+
         UpdateReputationUI();
         UpdateScoreUI();
         UpdateDifficulty();

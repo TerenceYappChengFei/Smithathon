@@ -96,8 +96,17 @@ public class MainMenuFlow : MonoBehaviour
 
     public void StartGame()
     {
+        GameModeSettings.isPracticeMode = false;
         SceneManager.LoadScene("SampleScene");
     }
+
+    public void StartPracticeMode()
+    {
+        GameModeSettings.isPracticeMode = true;
+        SceneManager.LoadScene("SampleScene");
+    }
+
+
 
     private IEnumerator ShowMainMenuSequence()
     {
