@@ -37,7 +37,7 @@ public class AudioSettings : MonoBehaviour
 
         muteAllToggle.isOn = isMuted;
 
-        ApplySavedVolumes();
+        ApplySavedVolumes(audioMixer);
     }
 
     public void SetMasterVolume(float value)
@@ -106,41 +106,59 @@ public class AudioSettings : MonoBehaviour
         }
     }
 
-    private void ApplySavedVolumes()
+    public static void ApplySavedVolumes(AudioMixer mixer)
     {
-        audioMixer.SetFloat(
+        float masterVolume = PlayerPrefs.GetFloat(
+            "MasterSliderValue",
+            1f
+        );
+
+        float musicVolume = PlayerPrefs.GetFloat(
+            "MusicSliderValue",
+            1f
+        );
+
+        float sfxVolume = PlayerPrefs.GetFloat(
+            "SFXSliderValue",
+            1f
+        );
+
+        bool isMuted =
+            PlayerPrefs.GetInt("MuteAll", 0) == 1;
+
+        mixer.SetFloat(
             "MusicVolume",
             ConvertToDecibels(
-                musicVolumeSlider.value
+                musicVolume
             )
         );
 
-        audioMixer.SetFloat(
+        mixer.SetFloat(
             "SFXVolume",
             ConvertToDecibels(
-                sfxVolumeSlider.value
+                sfxVolume
             )
         );
 
-        if (muteAllToggle.isOn)
+        if (isMuted)
         {
-            audioMixer.SetFloat(
+            mixer.SetFloat(
                 "MasterVolume",
                 -80f
             );
         }
         else
         {
-            audioMixer.SetFloat(
+            mixer.SetFloat(
                 "MasterVolume",
                 ConvertToDecibels(
-                    masterVolumeSlider.value
+                    masterVolume
                 )
             );
         }
     }
 
-    private float ConvertToDecibels(float value)
+    private static float ConvertToDecibels(float value)
     {
         value = Mathf.Max(value, 0.0001f);
         return Mathf.Log10(value) * 20f;

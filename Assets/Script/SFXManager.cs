@@ -7,7 +7,7 @@ public class SFXManager : MonoBehaviour
 
     public AudioSource sfxSource;
     public AudioMixerGroup sfxMixerGroup;
-
+    public AudioSource smeltingSource;
     public AudioClip buttonPress;
     public AudioClip crafting;
     public AudioClip gameOver;
@@ -43,6 +43,19 @@ public class SFXManager : MonoBehaviour
         sfxSource.spatialBlend = 0f;
         sfxSource.outputAudioMixerGroup =
             sfxMixerGroup;
+
+        if (smeltingSource == null)
+        {
+            smeltingSource =
+                gameObject.AddComponent<AudioSource>();
+        }
+
+        smeltingSource.playOnAwake = false;
+        smeltingSource.loop = true;
+        smeltingSource.spatialBlend = 0f;
+        smeltingSource.outputAudioMixerGroup =
+            sfxMixerGroup;
+
     }
 
     private void PlaySound(AudioClip sound)
@@ -82,8 +95,48 @@ public class SFXManager : MonoBehaviour
 
     public void PlaySmelting()
     {
-        PlaySound(smelting);
+        if (smelting == null)
+        {
+            return;
+        }
+
+        smeltingSource.clip = smelting;
+        smeltingSource.Play();
     }
+
+    public void StopSmelting()
+    {
+        if (smeltingSource == null)
+        {
+            return;
+        }
+
+        smeltingSource.Stop();
+        smeltingSource.clip = null;
+    }
+
+    //stops the sound when the game is paused
+    public void PauseSmelting()
+    {
+        if (smeltingSource != null &&
+            smeltingSource.isPlaying)
+        {
+            smeltingSource.Pause();
+        }
+    }
+    //resumes the sound when the game is resumed
+    public void ResumeSmelting()
+    {
+        if (smeltingSource != null &&
+            smeltingSource.clip != null &&
+            !smeltingSource.isPlaying)
+        {
+            smeltingSource.UnPause();
+        }
+    }
+
+
+
 
     public void PlaySmeltingDone()
     {

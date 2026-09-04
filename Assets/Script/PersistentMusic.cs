@@ -34,8 +34,16 @@ public class PersistentMusic : MonoBehaviour
 
     private void Start()
     {
+        if (musicMixerGroup != null)
+        {
+            AudioSettings.ApplySavedVolumes(
+                musicMixerGroup.audioMixer
+            );
+        }
+
         PlayMainMusic();
     }
+
 
     public void PlayMainMusic()
     {

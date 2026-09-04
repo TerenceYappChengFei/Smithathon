@@ -30,6 +30,11 @@ public class GameProgressManager : MonoBehaviour
     public GameOverAnimation gameOverAnimation;
     public TMP_Text finalScoreText;
 
+    [Header("Mode UI")]
+    public GameObject reputationUI;
+    public GameObject difficultyUI;
+    public GameObject practiceModeLabel;
+
 
     public float gameOverDelay = 1f; // Delay before showing the game over panel so won't feel too sudden
 
@@ -39,6 +44,7 @@ public class GameProgressManager : MonoBehaviour
     {
         practiceMode = GameModeSettings.isPracticeMode;
 
+        UpdateModeUI();
         UpdateReputationUI();
         UpdateScoreUI();
         UpdateDifficulty();
@@ -48,6 +54,13 @@ public class GameProgressManager : MonoBehaviour
         overwhelmedEnding.SetActive(false);
         gameOverStarted = false;
 
+    }
+
+    private void UpdateModeUI()
+    {
+        reputationUI.SetActive(!practiceMode);
+        difficultyUI.SetActive(!practiceMode);
+        practiceModeLabel.SetActive(practiceMode);
     }
 
     public void RegisterSuccess(int patienceBonus)

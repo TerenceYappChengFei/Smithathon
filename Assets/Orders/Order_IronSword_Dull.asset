@@ -15,4 +15,4 @@ MonoBehaviour:
   requestedWeapon: {fileID: 11400000, guid: 4d7b17a7ca6013b449228cfeee7009f3, type: 2}
   requiredMaterial1: {fileID: 11400000, guid: e6eb9eeffa86b954190a1d7842e48433, type: 2}
   requiredMaterial2: {fileID: 11400000, guid: f38e228d5cbf35f46bfa1eede72f41a1, type: 2}
-  patienceDuration: 40
+  patienceDuration: 60
