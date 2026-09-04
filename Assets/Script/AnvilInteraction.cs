@@ -117,6 +117,12 @@ public class AnvilInteraction : MonoBehaviour
 
         playerInventory.ReplaceSelectedItem(resultItem);
 
+        if (SFXManager.instance != null)
+        {
+            SFXManager.instance.PlaySmithing();
+        }
+
+
         Debug.Log(
             submittedIngot.itemName +
             " was forged into " +

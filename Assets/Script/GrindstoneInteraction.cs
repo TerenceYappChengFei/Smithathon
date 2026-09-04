@@ -42,6 +42,12 @@ public class GrindstoneInteraction : MonoBehaviour
             heldItem.sharpenedVersion
         );
 
+        if (SFXManager.instance != null)
+        {
+            SFXManager.instance.PlayGrinding();
+        }
+
+
         Debug.Log(
             heldItem.itemName +
             " was sharpened into " +

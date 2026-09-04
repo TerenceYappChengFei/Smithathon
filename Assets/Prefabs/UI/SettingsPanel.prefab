@@ -167,12 +167,24 @@ MonoBehaviour:
   m_HandleRect: {fileID: 6723942208601565514}
   m_Direction: 0
   m_MinValue: 0.0001
-  m_MaxValue: 100
+  m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.0001
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 870443385917462940}
+        m_TargetAssemblyTypeName: AudioSettings, Assembly-CSharp
+        m_MethodName: SetMasterVolume
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &130909495133155928
 GameObject:
   m_ObjectHideFlags: 0
@@ -433,6 +445,7 @@ GameObject:
   - component: {fileID: 4209141595858481318}
   - component: {fileID: 5634250967159127231}
   - component: {fileID: 4938517325159385440}
+  - component: {fileID: 1279268165094325482}
   m_Layer: 5
   m_Name: AudioButton
   m_TagString: Untagged
@@ -554,6 +567,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1279268165094325482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 581808812253461171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fec84ceaee76d9a47ae076e1f3e4de22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonSFX
 --- !u!1 &622032437161853567
 GameObject:
   m_ObjectHideFlags: 0
@@ -713,7 +738,19 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 870443385917462940}
+        m_TargetAssemblyTypeName: AudioSettings, Assembly-CSharp
+        m_MethodName: SetMuteAll
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 0
 --- !u!1 &1670267408562515854
 GameObject:
@@ -1249,6 +1286,7 @@ GameObject:
   - component: {fileID: 1930790076313076934}
   - component: {fileID: 3474988417157141530}
   - component: {fileID: 2155066353896499617}
+  - component: {fileID: 6494222676481105157}
   m_Layer: 5
   m_Name: SettingsBackButton
   m_TagString: Untagged
@@ -1358,6 +1396,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &6494222676481105157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2918488173841773149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fec84ceaee76d9a47ae076e1f3e4de22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonSFX
 --- !u!1 &2971657671143230706
 GameObject:
   m_ObjectHideFlags: 0
@@ -1908,6 +1958,7 @@ GameObject:
   - component: {fileID: 1125951341818116440}
   - component: {fileID: 2354015722252932100}
   - component: {fileID: 5065086989520984047}
+  - component: {fileID: 5580751792600101222}
   m_Layer: 5
   m_Name: Credits
   m_TagString: Untagged
@@ -2029,6 +2080,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &5580751792600101222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3585445195193723712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fec84ceaee76d9a47ae076e1f3e4de22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonSFX
 --- !u!1 &3766426733843985951
 GameObject:
   m_ObjectHideFlags: 0
@@ -2189,12 +2252,24 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1846830879487166993}
   m_Direction: 0
   m_MinValue: 0.0001
-  m_MaxValue: 100
+  m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.0001
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 870443385917462940}
+        m_TargetAssemblyTypeName: AudioSettings, Assembly-CSharp
+        m_MethodName: SetMusicVolume
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3908366410828845842
 GameObject:
   m_ObjectHideFlags: 0
@@ -2420,6 +2495,7 @@ GameObject:
   - component: {fileID: 6645691006311061994}
   - component: {fileID: 7924074327826508633}
   - component: {fileID: 1636452408135491966}
+  - component: {fileID: 3944934492061434180}
   m_Layer: 5
   m_Name: CreditsBackButton
   m_TagString: Untagged
@@ -2541,6 +2617,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &3944934492061434180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4633808739194979212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fec84ceaee76d9a47ae076e1f3e4de22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonSFX
 --- !u!1 &4815547332407479196
 GameObject:
   m_ObjectHideFlags: 0
@@ -3276,6 +3364,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3743454625537772075}
   - component: {fileID: 913875342130270844}
+  - component: {fileID: 870443385917462940}
   m_Layer: 5
   m_Name: SettingsPanel
   m_TagString: Untagged
@@ -3326,6 +3415,23 @@ MonoBehaviour:
   creditsPanel: {fileID: 3975456448836866414}
   audioButton: {fileID: 4938517325159385440}
   miscButton: {fileID: 1931858023090735519}
+--- !u!114 &870443385917462940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7413814892857683045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9c46ec6fc5d0864ba7c2bfa8d1e0e07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioSettings
+  audioMixer: {fileID: 24100000, guid: 875a5969c28da6d43bbb366e741cd9cc, type: 2}
+  masterVolumeSlider: {fileID: 3604731961353742658}
+  musicVolumeSlider: {fileID: 6822593243814656326}
+  sfxVolumeSlider: {fileID: 4200764784091571688}
+  muteAllToggle: {fileID: 2034129575473768475}
 --- !u!1 &7647366923723266309
 GameObject:
   m_ObjectHideFlags: 0
@@ -3521,12 +3627,24 @@ MonoBehaviour:
   m_HandleRect: {fileID: 5757755955952944716}
   m_Direction: 0
   m_MinValue: 0.0001
-  m_MaxValue: 100
+  m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.0001
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 870443385917462940}
+        m_TargetAssemblyTypeName: AudioSettings, Assembly-CSharp
+        m_MethodName: SetSFXVolume
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8419488628166410147
 GameObject:
   m_ObjectHideFlags: 0
@@ -3614,6 +3732,7 @@ GameObject:
   - component: {fileID: 6844815103182291076}
   - component: {fileID: 8670939965122268592}
   - component: {fileID: 1931858023090735519}
+  - component: {fileID: 8671387218079475521}
   m_Layer: 5
   m_Name: MiscButton
   m_TagString: Untagged
@@ -3735,6 +3854,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &8671387218079475521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8435911283922944456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fec84ceaee76d9a47ae076e1f3e4de22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonSFX
 --- !u!1 &8961214647948012831
 GameObject:
   m_ObjectHideFlags: 0

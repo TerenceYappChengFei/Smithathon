@@ -40,6 +40,12 @@ public class WorkbenchInteraction : MonoBehaviour
         {
             playerInventory.CombineItems(weaponHead.assembledVersion);
 
+            if (SFXManager.instance != null)
+            {
+                SFXManager.instance.PlayCrafting();
+            }
+
+
             Debug.Log(
                 weaponHead.itemName +
                 " was assembled into " +

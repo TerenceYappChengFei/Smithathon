@@ -23,6 +23,12 @@ public class CounterInteraction : MonoBehaviour
         {
             playerInventory.RemoveSelectedItem();
 
+            if (SFXManager.instance != null)
+            {
+                SFXManager.instance.PlaySubmitCorrect();
+            }
+
+
             Debug.Log(
                 heldItem.itemName +
                 " was successfully delivered"
@@ -36,6 +42,12 @@ public class CounterInteraction : MonoBehaviour
             if (orderFailed)
             {
                 playerInventory.RemoveSelectedItem();
+
+                if (SFXManager.instance != null)
+                {
+                    SFXManager.instance.PlaySubmitWrong();
+                }
+
 
                 Debug.Log(
                     heldItem.itemName +

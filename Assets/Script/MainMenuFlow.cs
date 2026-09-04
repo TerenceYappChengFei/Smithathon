@@ -63,6 +63,12 @@ public class MainMenuFlow : MonoBehaviour
         //Place the title above the onboarding screen
         titlePanel.transform.SetAsLastSibling();
 
+        if (SFXManager.instance != null)
+        {
+            SFXManager.instance.PlayTitleDrop();
+        }
+
+
         //Fade the title screen in
         yield return FadeCanvasGroup(
             titlePanel,

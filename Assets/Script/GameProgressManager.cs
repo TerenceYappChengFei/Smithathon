@@ -106,6 +106,16 @@ public class GameProgressManager : MonoBehaviour
         gameOverPanel.transform.SetAsLastSibling();
         finalScoreText.text = "Score: " + score;
         gameOverAnimation.PlayAnimation();
+        if (PersistentMusic.instance != null)
+        {
+            PersistentMusic.instance.PlayGameOverMusic();
+        }
+
+        if (PersistentMusic.instance != null)
+        {
+            PersistentMusic.instance.PlayGameOverMusic();
+        }
+
 
 
         if (failureReason == FailureReason.WrongOrder)

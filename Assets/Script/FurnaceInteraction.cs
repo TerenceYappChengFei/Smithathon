@@ -37,6 +37,12 @@ public class FurnaceInteraction : MonoBehaviour
             heldItem.smeltedVersion
         );
 
+        if (SFXManager.instance != null)
+        {
+            SFXManager.instance.PlaySmeltingDone();
+        }
+
+
         Debug.Log(
             heldItem.itemName +
             " was smelted into " +

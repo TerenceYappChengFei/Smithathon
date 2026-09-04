@@ -109,9 +109,14 @@ public class OrderManager : MonoBehaviour
             selectedOrder.requiredMaterial1,
             selectedOrder.requiredMaterial2,
             selectedOrder.patienceDuration *
-    patienceMultiplier
-
+            patienceMultiplier
         );
+
+        if (SFXManager.instance != null)
+        {
+            SFXManager.instance.PlayOrder();
+        }
+
     }
 
     private OrderDisplay FindEmptySlot()

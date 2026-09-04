@@ -44,6 +44,11 @@ public class PauseMenuController : MonoBehaviour
     {
         Time.timeScale = 1f;
 
+        if (PersistentMusic.instance != null)
+        {
+            PersistentMusic.instance.PlayMainMusic();
+        }
+
         SceneManager.LoadScene(
             SceneManager.GetActiveScene().name
         );
@@ -52,6 +57,12 @@ public class PauseMenuController : MonoBehaviour
     public void ReturnToMainMenu()
     {
         Time.timeScale = 1f;
+
+        if (PersistentMusic.instance != null)
+        {
+            PersistentMusic.instance.PlayMainMusic();
+        }
+
         SceneManager.LoadScene("MainMenu");
     }
 
