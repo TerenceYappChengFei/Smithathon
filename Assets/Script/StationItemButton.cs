@@ -1,5 +1,6 @@
 using UnityEngine;
 
+// Gives one configured ItemData to the first empty inventory slot.
 public class StationItemButton : MonoBehaviour
 {
     public ItemData itemToGive;

@@ -2,8 +2,11 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
+// Controls the furnace interaction.
+// The furnace can be empty, smelting an ore, or holding a finished ingot.
 public class FurnaceInteraction : MonoBehaviour
 {
+    // Lets the furnace remove items from and return items to the player.
     public PlayerInventory playerInventory;
 
     [Header("Smelting")]
@@ -12,14 +15,16 @@ public class FurnaceInteraction : MonoBehaviour
     public Slider smeltingSlider;
     public ParticleSystem smeltingParticles;
 
-    private ItemData storedOre;
-    private ItemData finishedIngot;
+    private ItemData storedOre; // The raw ore currently inside the furnace.
+    private ItemData finishedIngot; // The result created after smelting.
 
     private bool isSmelting;
     private bool ingotIsReady;
 
+    // Keeping this reference lets us cancel the timer when ore is removed early.
     private Coroutine smeltingCoroutine;
 
+    // Resets the furnace visuals when the scene begins.
     private void Start()
     {
         timerCanvas.SetActive(false);
@@ -31,6 +36,7 @@ public class FurnaceInteraction : MonoBehaviour
         );
     }
 
+    // Keeps the looping furnace sound in sync with paused gameplay.
     private void Update()
     {
         if (!isSmelting ||
@@ -50,6 +56,7 @@ public class FurnaceInteraction : MonoBehaviour
     }
 
 
+    // Called by PlayerInteraction. The result depends on the furnace's state.
     public void SmeltHeldItem()
     {
         if (isSmelting)
@@ -66,6 +73,7 @@ public class FurnaceInteraction : MonoBehaviour
         }
     }
 
+    // Validates the selected item, stores it, and starts the timer.
     private void StartSmelting()
     {
         ItemData heldItem =
@@ -93,6 +101,7 @@ public class FurnaceInteraction : MonoBehaviour
             return;
         }
 
+        // The item is moved out of the hotbar and stored inside the furnace.
         storedOre = heldItem;
         finishedIngot = heldItem.smeltedVersion;
 
@@ -114,6 +123,7 @@ public class FurnaceInteraction : MonoBehaviour
             StartCoroutine(SmeltingTimer());
     }
 
+    // A Coroutine lets the timer progress across many frames.
     private IEnumerator SmeltingTimer()
     {
         float elapsedTime = 0f;
@@ -122,6 +132,7 @@ public class FurnaceInteraction : MonoBehaviour
         {
             elapsedTime += Time.deltaTime;
 
+            // This division converts progress into a Slider value from 0 to 1.
             smeltingSlider.value =
                 elapsedTime / smeltingDuration;
 
@@ -152,6 +163,7 @@ public class FurnaceInteraction : MonoBehaviour
         );
     }
 
+    // Cancels smelting and returns the raw ore if an inventory slot is free.
     private void ReturnStoredOre()
     {
         bool itemReturned =
@@ -195,6 +207,7 @@ public class FurnaceInteraction : MonoBehaviour
         Debug.Log("The ore was removed from the furnace");
     }
 
+    // Gives the completed ingot to the player if an inventory slot is free.
     private void CollectFinishedIngot()
     {
         bool itemCollected =
@@ -223,6 +236,7 @@ public class FurnaceInteraction : MonoBehaviour
         smeltingSlider.value = 0f;
     }
 
+    // Stops persistent furnace audio when restarting or changing scenes.
     private void OnDestroy()
     {
         if (SFXManager.instance != null)

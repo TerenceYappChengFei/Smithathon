@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+// Controls the opening lore message and the multi-page recipe book.
 public class InformationUIController : MonoBehaviour
 {
     [Header("Lore")]
@@ -101,6 +102,7 @@ public class InformationUIController : MonoBehaviour
         }
     }
 
+    // Activates one page and disables navigation at the first and last pages.
     private void ShowCurrentPage()
     {
         for (int i = 0; i < recipePages.Length; i++)

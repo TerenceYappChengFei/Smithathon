@@ -1,5 +1,6 @@
 using UnityEngine;
 
+// UI-button version of assembly that combines two required inventory items.
 public class StationAssemblyButton : MonoBehaviour
 {
     public PlayerInventory playerInventory;

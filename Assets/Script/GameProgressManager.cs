@@ -8,6 +8,7 @@ public enum FailureReason
     WrongOrder,
     OrderTimeout
 }
+// Tracks reputation, score, difficulty, order results, and Game Over.
 public class GameProgressManager : MonoBehaviour
 {
     public int reputation = 50;
@@ -56,6 +57,7 @@ public class GameProgressManager : MonoBehaviour
 
     }
 
+    // Hides pressure-related UI in Practice Mode but leaves score visible.
     private void UpdateModeUI()
     {
         reputationUI.SetActive(!practiceMode);
@@ -63,6 +65,7 @@ public class GameProgressManager : MonoBehaviour
         practiceModeLabel.SetActive(practiceMode);
     }
 
+    // Awards score and raises progress after a successful order.
     public void RegisterSuccess(int patienceBonus)
     {
         successfulOrders++;
@@ -88,6 +91,7 @@ public class GameProgressManager : MonoBehaviour
         }
     }
 
+    // Records failure and checks whether Normal Mode should end.
     public void RegisterFailure(FailureReason failureReason)
     {
         if (gameOverStarted)

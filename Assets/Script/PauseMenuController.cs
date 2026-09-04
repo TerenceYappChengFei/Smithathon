@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+// Controls pausing, settings, confirmation panels, and scene navigation.
 public class PauseMenuController : MonoBehaviour
 {
     public GameObject pausePanel;
@@ -21,6 +22,7 @@ public class PauseMenuController : MonoBehaviour
 
     }
 
+    // Time scale zero freezes gameplay physics and timers.
     public void PauseGame()
     {
         pausePanel.SetActive(true);

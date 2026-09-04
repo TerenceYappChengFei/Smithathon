@@ -1,10 +1,12 @@
 using UnityEngine;
 
+// Submits the selected weapon to the order counter.
 public class CounterInteraction : MonoBehaviour
 {
     public PlayerInventory playerInventory;
     public OrderManager orderManager;
 
+    // A match completes an order; a mismatch fails the earliest active order.
     public void SubmitHeldItem()
     {
         ItemData heldItem =

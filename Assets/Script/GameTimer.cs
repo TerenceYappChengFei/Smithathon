@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 
+// Counts the length of the current run and displays it as minutes and seconds.
 public class GameTimer : MonoBehaviour
 {
     public TMP_Text timerText;

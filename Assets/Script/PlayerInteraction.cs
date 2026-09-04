@@ -1,5 +1,6 @@
 using UnityEngine;
 
+// Detects the station in front of the player and routes the Interact button.
 public class PlayerInteraction : MonoBehaviour
 {
     private StationInteraction currentStation; //for detection of which station player is facing
@@ -19,6 +20,7 @@ public class PlayerInteraction : MonoBehaviour
         SetInteractButton(false);
     }
 
+    // Saves references when compatible stations enter the forward trigger.
     private void OnTriggerEnter(Collider other)
     {
         StationInteraction station =
@@ -136,6 +138,7 @@ public class PlayerInteraction : MonoBehaviour
 
     }
 
+    // The else-if order ensures one button press uses only one station.
     public void Interact()
     {
         if (currentScrapBin != null)

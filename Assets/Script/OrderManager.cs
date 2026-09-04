@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
+// Generates orders, manages the three slots, and checks submissions.
 public class OrderManager : MonoBehaviour
 {
     public OrderDisplay[] orderSlots;
@@ -32,6 +33,7 @@ public class OrderManager : MonoBehaviour
         }
     }
 
+    // Repeats forever, waiting a random delay before each generation attempt.
     private IEnumerator GenerateOrders()
     {
         while (true)
@@ -133,6 +135,7 @@ public class OrderManager : MonoBehaviour
     }
 
     //Checks for valid order submission according to weapon held, if valid, clears order and returns true, else returns false
+    // Finds the earliest matching order when duplicate requests exist.
     public bool SubmitOrder(ItemData submittedItem)
     {
         OrderDisplay earliestMatchingOrder = null;
@@ -163,6 +166,7 @@ public class OrderManager : MonoBehaviour
     }
 
     //Finds the earliest active order and fails it
+    // Incorrect submissions fail the customer who has waited the longest.
     public bool FailEarliestOrder()
     {
         OrderDisplay earliestOrder = null;

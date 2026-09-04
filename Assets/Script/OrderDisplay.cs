@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
+// Controls one order card, its patience timer, and result animations.
 public class OrderDisplay : MonoBehaviour
 {
     public Image weaponIcon;
@@ -41,6 +42,7 @@ public class OrderDisplay : MonoBehaviour
         startingPosition = orderRectTransform.anchoredPosition;
     }
 
+    // Patience only decreases while an active order is not animating.
     private void Update()
     {
         if (!hasOrder || isResolving)
@@ -109,6 +111,7 @@ public class OrderDisplay : MonoBehaviour
         StartCoroutine(PlayEntranceAnimation());
     }
 
+    // Awards progress and starts the green success animation.
     public void CompleteOrder()
     {
         if (!hasOrder || isResolving)
@@ -133,6 +136,7 @@ public class OrderDisplay : MonoBehaviour
         StartCoroutine(PlayResultAnimation(Color.green));
     }
 
+    // Records why the order failed and starts the red failure animation.
     public void FailOrder(FailureReason failureReason)
     {
         if (!hasOrder || isResolving)

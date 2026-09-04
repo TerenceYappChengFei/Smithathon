@@ -1,5 +1,6 @@
 using UnityEngine;
 
+// Replaces a valid dull weapon with its sharpened version.
 public class GrindstoneInteraction : MonoBehaviour
 {
     public PlayerInventory playerInventory;

@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+// Switches between Audio and Misc settings and controls the Credits panel.
 public class SettingsTabs : MonoBehaviour
 {
     public GameObject audioContent;

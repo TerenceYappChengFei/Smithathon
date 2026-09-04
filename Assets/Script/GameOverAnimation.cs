@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
+// Animates the Game Over overlay, content, final score, and buttons.
 public class GameOverAnimation : MonoBehaviour
 {
     public CanvasGroup blackPanel;
@@ -45,6 +46,7 @@ public class GameOverAnimation : MonoBehaviour
         StartCoroutine(AnimateGameOver());
     }
 
+    // Coroutines play each part of the entrance sequence in order.
     private IEnumerator AnimateGameOver()
     {
         blackPanel.alpha = 0f;

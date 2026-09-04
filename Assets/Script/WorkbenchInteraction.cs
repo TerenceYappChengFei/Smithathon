@@ -1,5 +1,6 @@
 using UnityEngine;
 
+// Combines two held materials into a valid or defective weapon.
 public class WorkbenchInteraction : MonoBehaviour
 {
     public PlayerInventory playerInventory;

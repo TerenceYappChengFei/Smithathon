@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+// Stores two items and keeps the hotbar icons and selection synchronized.
 public class PlayerInventory : MonoBehaviour
 {
     public ItemData slot1Item;
@@ -74,6 +75,7 @@ public class PlayerInventory : MonoBehaviour
     }
 
     // Adds an item to the first available slot in the inventory. Returns true if the item was added successfully
+    // Returns true when an empty slot was found and false when inventory is full.
     public bool AddItem(ItemData newItem)
     {
         //Tries to add to slot 1 first
@@ -142,6 +144,7 @@ public class PlayerInventory : MonoBehaviour
     //Time to check crafting UGGGGGGGGGGGGGGGGGGGGGGGGGGHHHHHHHHHHHHHHHH
 
     //Checks for viable crafting recipe, and the order can either in inventory
+    // Accepts either slot order so the material positions do not matter.
     public bool HasItems(ItemData firstItem, ItemData secondItem)
     {
         bool normalOrder =

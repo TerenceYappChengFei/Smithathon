@@ -4,6 +4,7 @@ using UnityEngine;
     fileName = "NewOrder",
     menuName = "Smithathon/Order"
 )]
+// A reusable order asset containing its weapon, materials, and patience time.
 public class OrderData : ScriptableObject
 {
     public ItemData requestedWeapon;

@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 
+// Connects the settings UI to the AudioMixer and saves values with PlayerPrefs.
 public class AudioSettings : MonoBehaviour
 {
     public AudioMixer audioMixer;
@@ -106,6 +107,7 @@ public class AudioSettings : MonoBehaviour
         }
     }
 
+    // Static allows audio preferences to load before the Settings panel is opened.
     public static void ApplySavedVolumes(AudioMixer mixer)
     {
         float masterVolume = PlayerPrefs.GetFloat(
@@ -158,6 +160,7 @@ public class AudioSettings : MonoBehaviour
         }
     }
 
+    // Converts a Slider value from 0-1 into the decibels expected by AudioMixer.
     private static float ConvertToDecibels(float value)
     {
         value = Mathf.Max(value, 0.0001f);

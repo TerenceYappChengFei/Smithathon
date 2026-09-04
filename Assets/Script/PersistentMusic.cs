@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.Audio;
 
+// Keeps one music player alive while Unity changes scenes.
 public class PersistentMusic : MonoBehaviour
 {
     public static PersistentMusic instance;
@@ -10,6 +11,7 @@ public class PersistentMusic : MonoBehaviour
     public AudioClip gameOverMusic;
     public AudioMixerGroup musicMixerGroup;
 
+    // Creates the singleton before other scripts attempt to use it.
     private void Awake()
     {
         if (instance != null && instance != this)

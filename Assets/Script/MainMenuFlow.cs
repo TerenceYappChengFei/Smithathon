@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+// Controls the logo onboarding, title screen, main menu, and mode selection.
 public class MainMenuFlow : MonoBehaviour
 {
     public CanvasGroup onboardingPanel;
@@ -32,6 +33,7 @@ public class MainMenuFlow : MonoBehaviour
         StartCoroutine(PlayBootSequence());
     }
 
+    // Shows the logos, fades to black, and then reveals the title screen.
     private IEnumerator PlayBootSequence()
     {
         transitionRunning = true;
@@ -130,6 +132,7 @@ public class MainMenuFlow : MonoBehaviour
         transitionRunning = false;
     }
 
+    // Gradually changes opacity without freezing other menu animations.
     private IEnumerator FadeCanvasGroup(
         CanvasGroup group,
         float startAlpha,

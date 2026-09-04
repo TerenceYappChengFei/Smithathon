@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+// Controls mold selection and converts submitted ingots into weapon heads.
 public class AnvilInteraction : MonoBehaviour
 {
     public PlayerInventory playerInventory;
@@ -44,6 +45,7 @@ public class AnvilInteraction : MonoBehaviour
         Debug.Log("Spear mold selected");
     }
 
+    // Changes the Image colours so the player can see the selected mold.
     private void UpdateMoldHighlights()
     {
         swordMoldImage.color = normalMoldColor;
@@ -64,6 +66,7 @@ public class AnvilInteraction : MonoBehaviour
         }
     }
 
+    // Attempts to forge the submitted ingot into the selected head type.
     public void ForgeWeaponHead()
     {
         if (submittedIngot == null)

@@ -1,5 +1,6 @@
 using UnityEngine;
 
+// Converts one required inventory item into a configured result item.
 public class StationRecipeButton : MonoBehaviour
 {
     public PlayerInventory playerInventory;

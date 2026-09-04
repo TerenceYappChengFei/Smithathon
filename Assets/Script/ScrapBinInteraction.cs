@@ -1,5 +1,6 @@
 using UnityEngine;
 
+// Permanently removes the item in the selected hotbar slot.
 public class ScrapBinInteraction : MonoBehaviour
 {
     public PlayerInventory playerInventory;

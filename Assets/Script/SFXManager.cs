@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.Audio;
 
+// Provides one shared location for sound effects and survives scene changes.
 public class SFXManager : MonoBehaviour
 {
     public static SFXManager instance;
@@ -58,6 +59,7 @@ public class SFXManager : MonoBehaviour
 
     }
 
+    // Short sounds share one AudioSource and may overlap through PlayOneShot.
     private void PlaySound(AudioClip sound)
     {
         if (sound == null)
@@ -93,6 +95,7 @@ public class SFXManager : MonoBehaviour
         PlaySound(order);
     }
 
+    // Smelting has a separate looping source so it can stop independently.
     public void PlaySmelting()
     {
         if (smelting == null)

@@ -1,6 +1,7 @@
 using UnityEngine;
 
 //Defines what category the item belongs to
+// Categories let stations decide which types of items they accept.
 public enum ItemCategory
 {
     Ore,
@@ -24,6 +25,7 @@ public enum WeaponCondition
 )]
 
 
+// A reusable asset containing one item's icon, category, and crafting links.
 public class ItemData : ScriptableObject
 {
     //Defines item name
