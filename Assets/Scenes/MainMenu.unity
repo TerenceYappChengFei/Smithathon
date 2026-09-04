@@ -690,6 +690,7 @@ RectTransform:
   - {fileID: 1668882866}
   - {fileID: 905637218}
   - {fileID: 1748270352}
+  - {fileID: 1595298062}
   m_Father: {fileID: 476021983}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -872,7 +873,6 @@ RectTransform:
   - {fileID: 220501302}
   - {fileID: 763625160}
   - {fileID: 390657736}
-  - {fileID: 1595298062}
   - {fileID: 1937200384}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1834,7 +1834,7 @@ GameObject:
   - component: {fileID: 1595298064}
   - component: {fileID: 1595298063}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Logo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1852,7 +1852,7 @@ RectTransform:
   m_LocalScale: {x: 0.46802, y: 0.46802, z: 0.46802}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 476021983}
+  m_Father: {fileID: 390657736}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2529,6 +2529,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 476021983}
     m_Modifications:
+    - target: {fileID: 1846830879487166993, guid: 0de109d74a8b36141a66883645782159, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2155066353896499617, guid: 0de109d74a8b36141a66883645782159, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -2637,9 +2641,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3783843992097927863, guid: 0de109d74a8b36141a66883645782159, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5757755955952944716, guid: 0de109d74a8b36141a66883645782159, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6723942208601565514, guid: 0de109d74a8b36141a66883645782159, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125186476502208438, guid: 0de109d74a8b36141a66883645782159, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7413814892857683045, guid: 0de109d74a8b36141a66883645782159, type: 3}
       propertyPath: m_Name
       value: SettingsPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 7413814892857683045, guid: 0de109d74a8b36141a66883645782159, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202978855757583445, guid: 0de109d74a8b36141a66883645782159, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

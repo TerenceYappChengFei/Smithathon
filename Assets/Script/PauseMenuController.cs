@@ -5,6 +5,7 @@ public class PauseMenuController : MonoBehaviour
 {
     public GameObject pausePanel;
     public GameObject settingsPanel;
+    public GameObject quitConfirmationPanel;
 
 
     private bool isPaused;
@@ -15,6 +16,7 @@ public class PauseMenuController : MonoBehaviour
 
         pausePanel.SetActive(false);
         settingsPanel.SetActive(false);
+        quitConfirmationPanel.SetActive(false);
         isPaused = false;
 
     }
@@ -51,6 +53,17 @@ public class PauseMenuController : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
+    }
+
+    public void OpenQuitConfirmation()
+    {
+        quitConfirmationPanel.SetActive(true);
+        quitConfirmationPanel.transform.SetAsLastSibling();
+    }
+
+    public void CloseQuitConfirmation()
+    {
+        quitConfirmationPanel.SetActive(false);
     }
 
     public void OpenSettings()
