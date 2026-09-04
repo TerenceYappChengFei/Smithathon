@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3bb7ea6afe941043a9993bf4e1ef132, type: 3}
+  m_Name: Order_BronzeAxe_Sharp
+  m_EditorClassIdentifier: Assembly-CSharp::OrderData
+  requestedWeapon: {fileID: 11400000, guid: edc7065516c795d4e9f6c2b563feaf64, type: 2}
+  requiredMaterial1: {fileID: 11400000, guid: e6eb9eeffa86b954190a1d7842e48433, type: 2}
+  requiredMaterial2: {fileID: 11400000, guid: 3b15c2bea9541ea4b888d10f5248beca, type: 2}
+  patienceDuration: 30

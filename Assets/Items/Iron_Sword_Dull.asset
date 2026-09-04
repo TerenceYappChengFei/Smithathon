@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4fa2b6a925e5cb748a195a958adc1303, type: 3}
-  m_Name: Aquarite_Spear_Axe
+  m_Name: Iron_Sword_Dull
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
-  itemName: Aquarite Spear Sharp
-  itemIcon: {fileID: 88909924, guid: 5447c30cde87abe41a4fe4080dd2f9ce, type: 3}
+  itemName: Iron Sword Dull
+  itemIcon: {fileID: 1347010774, guid: f35205b44dea3cd4bb707f5e859b8994, type: 3}
   itemCategory: 4
-  weaponCondition: 2
-  sharpenedVersion: {fileID: 0}
+  weaponCondition: 1
+  sharpenedVersion: {fileID: 11400000, guid: c448db35cedb5c947ab082db1a42ce9f, type: 2}
   smeltedVersion: {fileID: 0}

@@ -7,6 +7,9 @@ public class OrderManager : MonoBehaviour
     public OrderData[] availableOrders;
     public GameProgressManager gameProgressManager;
     private float patienceMultiplier = 1f;
+    private OrderData lastGeneratedOrder;
+    private int consecutiveOrderCount;
+
 
 
 
@@ -65,6 +68,35 @@ public class OrderManager : MonoBehaviour
 
         OrderData selectedOrder =
             availableOrders[randomIndex];
+
+        if (availableOrders.Length > 1)
+        {
+            while (
+                selectedOrder == lastGeneratedOrder &&
+                consecutiveOrderCount >= 2
+            )
+            {
+                randomIndex = Random.Range(
+                    0,
+                    availableOrders.Length
+                );
+
+                selectedOrder =
+                    availableOrders[randomIndex];
+            }
+        }
+
+        if (selectedOrder == lastGeneratedOrder)
+        {
+            consecutiveOrderCount++;
+        }
+        else
+        {
+            lastGeneratedOrder = selectedOrder;
+            consecutiveOrderCount = 1;
+        }
+
+
 
         emptySlot.orderNumber = nextOrderNumber;
         nextOrderNumber++;

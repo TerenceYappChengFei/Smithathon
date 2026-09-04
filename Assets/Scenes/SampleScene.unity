@@ -2846,7 +2846,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 460.88, y: 10.098}
+  m_AnchoredPosition: {x: 460.88, y: -18}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &414444596
@@ -5558,7 +5558,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &888028485
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8293,7 +8293,7 @@ Transform:
   m_GameObject: {fileID: 1284565690}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -18.218018, y: -22.989502, z: -423.2083}
+  m_LocalPosition: {x: -38, y: -22.989502, z: -423.2083}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8566,7 +8566,36 @@ MonoBehaviour:
   - {fileID: 1696875660}
   - {fileID: 707787737}
   availableOrders:
+  - {fileID: 11400000, guid: 4e1be18144865cb47812efe419f525ea, type: 2}
+  - {fileID: 11400000, guid: 92fdb6c8a5db3564189fae0b11542019, type: 2}
+  - {fileID: 11400000, guid: 1ad9ea8b19c3f85469ee1173dd081fc4, type: 2}
+  - {fileID: 11400000, guid: 59e7a3d16caaa9347b0e31b5d260d108, type: 2}
+  - {fileID: 11400000, guid: 4c44e0657f8e90045a33c043d104e525, type: 2}
   - {fileID: 11400000, guid: c7ce8ecd0ab56574293bfd2ee888e08f, type: 2}
+  - {fileID: 11400000, guid: d0000000000000000000000000000001, type: 2}
+  - {fileID: 11400000, guid: d0000000000000000000000000000002, type: 2}
+  - {fileID: 11400000, guid: d0000000000000000000000000000003, type: 2}
+  - {fileID: 11400000, guid: d0000000000000000000000000000004, type: 2}
+  - {fileID: 11400000, guid: d0000000000000000000000000000005, type: 2}
+  - {fileID: 11400000, guid: d0000000000000000000000000000006, type: 2}
+  - {fileID: 11400000, guid: d0000000000000000000000000000007, type: 2}
+  - {fileID: 11400000, guid: d0000000000000000000000000000008, type: 2}
+  - {fileID: 11400000, guid: d0000000000000000000000000000009, type: 2}
+  - {fileID: 11400000, guid: d000000000000000000000000000000a, type: 2}
+  - {fileID: 11400000, guid: d000000000000000000000000000000b, type: 2}
+  - {fileID: 11400000, guid: d000000000000000000000000000000c, type: 2}
+  - {fileID: 11400000, guid: d000000000000000000000000000000d, type: 2}
+  - {fileID: 11400000, guid: d000000000000000000000000000000e, type: 2}
+  - {fileID: 11400000, guid: d000000000000000000000000000000f, type: 2}
+  - {fileID: 11400000, guid: d0000000000000000000000000000010, type: 2}
+  - {fileID: 11400000, guid: d0000000000000000000000000000011, type: 2}
+  - {fileID: 11400000, guid: d0000000000000000000000000000012, type: 2}
+  - {fileID: 11400000, guid: d0000000000000000000000000000013, type: 2}
+  - {fileID: 11400000, guid: d0000000000000000000000000000014, type: 2}
+  - {fileID: 11400000, guid: d0000000000000000000000000000015, type: 2}
+  - {fileID: 11400000, guid: d0000000000000000000000000000016, type: 2}
+  - {fileID: 11400000, guid: d0000000000000000000000000000017, type: 2}
+  - {fileID: 11400000, guid: d0000000000000000000000000000018, type: 2}
   gameProgressManager: {fileID: 1404727414}
   minimumSpawnDelay: 5
   maximumSpawnDelay: 10
@@ -8697,7 +8726,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9045eed30e659b4086a4b28f2d0b9db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameProgressManager
-  reputation: 10
+  reputation: 50
   successfulOrders: 0
   failedOrders: 0
   score: 0
@@ -9261,6 +9290,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1228759250}
+  - {fileID: 1284565691}
   - {fileID: 2140135998}
   - {fileID: 513155071}
   - {fileID: 414444595}
@@ -9269,7 +9299,6 @@ RectTransform:
   - {fileID: 685781687}
   - {fileID: 1315894536}
   - {fileID: 1805445824}
-  - {fileID: 1284565691}
   - {fileID: 2300000001}
   - {fileID: 893960665}
   - {fileID: 888028485}
