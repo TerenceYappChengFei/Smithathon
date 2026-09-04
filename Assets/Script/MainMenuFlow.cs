@@ -8,12 +8,15 @@ public class MainMenuFlow : MonoBehaviour
     public CanvasGroup logoGroup;
     public CanvasGroup titlePanel;
     public CanvasGroup mainMenuPanel;
+    public GameObject settingsPanel;
+
 
     public float fadeDuration = 1f;
     public float logoDisplayDuration = 2f;
     public float blackScreenDuration = 0.5f;
 
     private bool transitionRunning;
+
 
     private void Start()
     {
@@ -23,6 +26,8 @@ public class MainMenuFlow : MonoBehaviour
         SetPanel(logoGroup, 0f, false);
         SetPanel(titlePanel, 0f, false);
         SetPanel(mainMenuPanel, 0f, false);
+        settingsPanel.SetActive(false);
+
 
         StartCoroutine(PlayBootSequence());
     }
@@ -147,4 +152,21 @@ public class MainMenuFlow : MonoBehaviour
         group.interactable = allowInput;
         group.blocksRaycasts = allowInput;
     }
+
+    public void OpenSettings()
+    {
+        SetPanel(mainMenuPanel, 1f, false);
+
+        settingsPanel.SetActive(true);
+        settingsPanel.transform.SetAsLastSibling();
+    }
+
+    public void CloseSettings()
+    {
+        settingsPanel.SetActive(false);
+
+        mainMenuPanel.transform.SetAsLastSibling();
+        SetPanel(mainMenuPanel, 1f, true);
+    }
+
 }

@@ -4,6 +4,8 @@ using UnityEngine.SceneManagement;
 public class PauseMenuController : MonoBehaviour
 {
     public GameObject pausePanel;
+    public GameObject settingsPanel;
+
 
     private bool isPaused;
 
@@ -12,7 +14,9 @@ public class PauseMenuController : MonoBehaviour
         Time.timeScale = 1f;
 
         pausePanel.SetActive(false);
+        settingsPanel.SetActive(false);
         isPaused = false;
+
     }
 
     public void PauseGame()
@@ -48,4 +52,21 @@ public class PauseMenuController : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
     }
+
+    public void OpenSettings()
+    {
+        pausePanel.SetActive(false);
+
+        settingsPanel.SetActive(true);
+        settingsPanel.transform.SetAsLastSibling();
+    }
+
+    public void CloseSettings()
+    {
+        settingsPanel.SetActive(false);
+
+        pausePanel.SetActive(true);
+        pausePanel.transform.SetAsLastSibling();
+    }
+
 }
