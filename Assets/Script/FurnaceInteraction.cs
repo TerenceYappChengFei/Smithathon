@@ -203,7 +203,6 @@ public class FurnaceInteraction : MonoBehaviour
             SFXManager.instance.StopSmelting();
         }
 
-
         Debug.Log("The ore was removed from the furnace");
     }
 
