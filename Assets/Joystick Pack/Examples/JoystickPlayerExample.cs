@@ -13,6 +13,8 @@ public class JoystickPlayerExample : MonoBehaviour
 
     public VariableJoystick variableJoystick;
     public Rigidbody rb;
+    public Animator animator;
+
 
     private void Start()
     {
@@ -38,8 +40,12 @@ public class JoystickPlayerExample : MonoBehaviour
             0f,
             -variableJoystick.Vertical
         );
+        // Check if the player is moving based on the joystick input
+        bool isMoving = direction.magnitude > 0.1f;
+        animator.SetBool("IsMoving", isMoving);
 
-        if (direction.magnitude > 1f)
+
+        if (isMoving)
         {
             direction.Normalize();
         }
